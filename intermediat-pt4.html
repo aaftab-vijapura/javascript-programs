@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #b9b7b7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 50%;
+        height: auto;
+        background-color: darkkhaki;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .inputs input,
+    .inputs button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input type="text" name="name" id="name" placeholder="Please Enter Name">
+            <!-- <label for="name" style="color: red;" class="lbl1" id="lbl1"></label> -->
+            <input type="email" name="email" id="email" placeholder="Please Enter Email">
+            <label for="email" style="color: red;" class="lbl2" id="lbl2"></label>
+            <button type="submit" onclick="myCon()">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+
+    function myCon() {
+        let nameInput = document.getElementById("name");
+        let emailInput = document.getElementById("email");
+        let messageLabel2 = document.getElementById("lbl2");
+        let name = nameInput.value.trim();
+        let email = emailInput.value.trim();
+        if (name === "" || email === "") {
+            messageLabel2.textContent = "Please Fill Both Textboxes";
+            return;
+        }
+        else {
+            messageLabel2.textContent = " ";
+            return;
+        }
+
+    }
+
+</script>
+
+</html>

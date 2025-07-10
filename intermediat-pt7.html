@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <label for="name" class="headname">Name</label>
+            <input type="text" name="name" id="name" class="name" placeholder="Enter Name">
+            <label id="errmsg" class="errmsg" for="name"></label>
+
+            <label for="email" class="headname">Email</label>
+            <input type="email" name="email" id="email" class="email" placeholder="Enter Email">
+            <label id="errmsg" class="errmsg" for="email"></label>
+
+            <label for="password" class="headname">Password</label>
+            <input type="password" name="password" id="password" class="password" placeholder="Enter Password">
+            <label id="errmsg" class="errmsg" for="password"></label>
+
+            <label for="address" class="headname">Address</label>
+            <textarea name="address" id="address" class="address" placeholder="Enter Address"></textarea>
+            <label id="errmsg" class="errmsg" for="address"></label>
+
+            <!-- Sport Section -->
+            <div class="group">
+                <label class="headname">Choose your sports</label>
+                <label class="option-label">
+                    <input type="checkbox" name="sport" value="cricket" id="sport">
+                    Cricket
+                </label>
+                <label class="option-label">
+                    <input type="checkbox" name="sport" value="football" id="sport">
+                    Football
+                </label>
+                <label class="option-label">
+                    <input type="checkbox" name="sport" value="baseball" id="sport">
+                    Baseball
+                </label>
+                <label id="errmsg" class="errmsg" for="sport"></label>
+            </div>
+
+            <!-- Gender Section -->
+            <div class="group">
+                <label class="headname">Choose your gender</label>
+                <label class="option-label">
+                    <input type="radio" name="gender" value="male" id="gender">
+                    Male
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="gender" value="female" id="gender">
+                    Female
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="gender" value="prefer_not_to_say" id="gender">
+                    Prefer not to say
+                </label>
+                <label id="errmsg" class="errmsg" for="gender"></label>
+
+            </div>
+
+            <label for="country" class="headname">Select Your Country</label>
+            <select name="country" id="country">
+                <option value="">--Select--</option>
+                <option value="india">India</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="japan">Japan</option>
+                <option value="uk">UK</option>
+            </select>
+            <label id="errmsg" class="errmsg" for="country"></label>
+            <div class="button-groups">
+                <button type="reset" id="reset" class="reset" onclick="reset()">Reset</button>
+                <button type="submit" id="submit" class="submit" onclick="Submit()">Submit</button>
+                 <!-- <input type="button" id="submitBtn" value="Submit" onclick="Submit()" /> -->
+
+            </div>
+        </div>
+        <div class="tablecontent">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>Sport</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

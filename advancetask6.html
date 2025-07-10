@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //first task
+
+      // let arr = [11, 31, 35, 1, 71, 13, 21, 6, 71, 91];
+      // function isEven(num) {
+      //   return num % 2 == 0;
+      // }
+      // let index = arr.findIndex(isEven);
+
+      // document.getElementById("demo").innerHTML = index;
+
+      //second task
+
+      // let arr = [
+      //   "bcvs",
+      //   "Ssddd",
+      //   "aefewfe",
+      //   "def",
+      //   "DVvdv",
+      //   "vfvf",
+      //   "fwdqr",
+      //   "Fregr",
+      //   "tewwererfw",
+      //   "aaaaa",
+      // ];
+
+      //   function isAlatt(str) {
+      //     return str.startsWith("a");
+      //   }
+
+      //   let index=arr.findIndex(isAlatt);
+
+      // document.getElementById("demo").innerHTML = index;
+
+      //third task
+
+      let obj = [
+        { name: "aaftab", age: "20" },
+        { name: "ak", age: "30" },
+        { name: "harry", age: "29" },
+        { name: "magan", age: "31" },
+      ];
+
+      // console.log(obj.indexOf[age])
+
+      function isAgeGreater(obj) {
+        console.log(Number(obj.age))
+        return Number(obj.age) >= 30;
+      }
+
+      let index = obj.findIndex(isAgeGreater);
+      document.getElementById("demo").innerHTML = index;
+    </script>
+  </body>
+</html>

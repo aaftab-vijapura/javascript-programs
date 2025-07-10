@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* #demo1,
+    #demo2 {
+      display: none;
+    } */
+    .container {
+      background-color: brown;
+      color: white;
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .container img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <!-- <button id="btn1" onclick="allHide()">Hide all</button>
+    <button id="btn2" onclick="firstHide()">Hide First</button
+    ><button id="btn3" onclick="lastHide()">Hide Last</button><br />
+    <input type="text" id="demo1" placeholder="I am First" />
+    <input type="text" id="demo2" placeholder="I am Last" /> -->
+    <!-- <button onclick="myFun( )">hello</button>
+    <h1 id="demo1"></h1> -->
+  </body>
+  <!-- <script>
+    let input1 = document.getElementById("demo1");
+    let input2 = document.getElementById("demo2");
+    function allHide() {
+      input1.style.display =
+        input1.style.display === "block" ? "none" : "block";
+      input2.style.display =
+        input2.style.display === "block" ? "none" : "block";
+    }
+    function firstHide() {
+      input1.style.display =
+        input1.style.display === "block" ? "none" : "block";
+    }
+    function lastHide() {
+      input2.style.display =
+        input2.style.display === "block" ? "none" : "block";
+    }
+  </script> -->
+  <!-- <script>
+    function myFun() {
+      let userName = prompt("Enter Your Name");
+      if (userName) {
+        document.getElementById("demo1").innerHTML = `Welcome! ${userName}`;
+      }
+      else{
+        document.getElementById("demo1").innerHTML = `Welcome! Visitor`;
+      }
+
+    }
+  </script> -->
+
+  <script>
+    const uiData = {
+      page: 2,
+      per_page: 6,
+      total: 12,
+      total_pages: 2,
+      data: [
+        {
+          id: 7,
+          email: "michael.lawson@reqres.in",
+          first_name: "Michael",
+          last_name: "Lawson",
+          avatar: "https://reqres.in/img/faces/7-image.jpg",
+        },
+        {
+          id: 8,
+          email: "lindsay.ferguson@reqres.in",
+          first_name: "Lindsay",
+          last_name: "Ferguson",
+          avatar: "https://reqres.in/img/faces/8-image.jpg",
+        },
+        {
+          id: 9,
+          email: "tobias.funke@reqres.in",
+          first_name: "Tobias",
+          last_name: "Funke",
+          avatar: "https://reqres.in/img/faces/9-image.jpg",
+        },
+        {
+          id: 10,
+          email: "byron.fields@reqres.in",
+          first_name: "Byron",
+          last_name: "Fields",
+          avatar: "https://reqres.in/img/faces/10-image.jpg",
+        },
+        {
+          id: 11,
+          email: "george.edwards@reqres.in",
+          first_name: "George",
+          last_name: "Edwards",
+          avatar: "https://reqres.in/img/faces/11-image.jpg",
+        },
+        {
+          id: 12,
+          email: "rachel.howell@reqres.in",
+          first_name: "Rachel",
+          last_name: "Howell",
+          avatar: "https://reqres.in/img/faces/12-image.jpg",
+        },
+      ],
+    };
+
+    uiData.data.forEach(user => {
+      let container = document.createElement("div");
+      container.className = "container";
+
+      let img = document.createElement("img");
+      img.src = user.avatar;
+      img.alt = `${user.first_name}${user.last_name}`;
+
+      let h3 = document.createElement("h3");
+      h3.textContent = `${user.first_name}${user.last_name}`;
+
+      let p = document.createElement("P");
+      p.textContent = user.email;
+
+      container.appendChild(img);
+      container.appendChild(h3);
+      container.appendChild(p);
+      
+      document.body.appendChild(container);
+    });
+  </script>
+</html>

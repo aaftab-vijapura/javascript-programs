@@ -1,0 +1,708 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>helloWorld</h1>
+    <!-- <button type="submit" onclick="mycon()" style="width: 50%; height: 400px;">Submit</button> -->
+</body>
+<script>
+
+
+    console.dir(document.body);
+    console.log(document.body);
+    
+
+    // let userInput = prompt("Enter One Number for Calculation:");
+
+    // let arr = [];
+
+    // for (let i = 1; i <= userInput; i++) {
+    //     arr[i - 1] = i;
+    // }
+
+    // console.log(arr);
+    
+    // let sum = arr.reduce((prev, curr) => {
+    //     return prev + curr;
+    // });
+
+    // console.log(sum);
+
+    // let fact=arr.reduce((prev,curr)=>{
+    //     return prev*curr;
+    // });
+
+    // console.log(fact);
+    
+    // let marks = [91, 89, 92, 82, 94, 42];
+
+    // let toppers = marks.filter((val) => {
+    //     return val > 90;
+    // });
+    // console.log(toppers);
+
+    // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // let evenArr = arr.filter((val) => {
+    //     return val % 2 === 0;
+    // });
+    // console.log(evenArr);
+
+    // arr.forEach(function square(ans){
+    //     console.log(ans*ans); //ans**2
+    // });
+    // arr.forEach(function printVal(val){
+    //     console.log(val);
+    // });
+
+
+    // let arr2 = ["hello","world","my","name","xyz"];
+    // arr2.forEach((val2)=>{
+    //     console.log(val2.toUpperCase());
+    // });
+    // function mycon(){
+    //     let text= 0;
+    //     var numbers=[10,10,20,30,40];
+    //     for(let i=0;i<numbers.length ;i++){
+    //         text+=numbers[i];
+    //     }
+    //     console.log("sum",text);
+    // }
+
+    // function mycon(){
+    //     const cartItems = [{ name: "Laptop", price: 999.99 },
+    //      { name: "Headphones", price: 149.95 },
+    //      { name: "Mouse", price: 29.99 }];
+    //      let total=0;
+
+    //      for (let i = 0; i < cartItems.length; i++) {
+    //             total+=cartItems[i].price;
+    //      }
+    //      console.log(total);
+    //     }
+
+    // function mycon(){
+    //     const numbers = [1, 2, 3, 4, 5, 6, 7, 8,10];
+    //     const even=[];
+    //     for (let i = 0; i < numbers.length; i++) {
+    //         if (numbers[i]%2===0) {
+    //             even.push(numbers[i]);
+    //         }
+    //     }
+    //     console.log("Even Num:",even);
+    // }
+
+    // function mycon(){
+    //     const numbers=[1,2,3,4,5,6,7,8,9,10];
+    //     const odd=[];
+
+    //     for (let i = 0; i < numbers.length; i++) {
+    //             if (numbers[i]%2===1) {
+    //                 odd.push(numbers[i]);
+    //             }
+    //     }
+    //     console.log(odd);
+    // }
+    // function mycon(){
+    //     const numbers=5;
+    //     let result=0;
+    //     for (let i = 1; i <= 10; i++) {
+    //            result=numbers*i;
+    //            console.log(`${numbers}X${i}=${result}`) ;
+    //     }
+    // }
+
+    // function mycon() {
+    //     const fruits = ["apple", "banana", "orange", "grape"];
+    //     const targetFruit = "orange";
+    //     let targetIndex = -1;
+
+    //     for (let i = 0; i < fruits.length; i++) {
+    //         if (fruits[i] === targetFruit) {
+    //             targetIndex = i;
+    //             break;
+    //         }
+    //     }
+
+    //     if (targetIndex !== -1) {
+    //         console.log("Index of", targetFruit, "is:", targetIndex);
+    //     } else {
+    //         console.log(targetFruit, "not found in the array.");
+    //     }
+    // }
+
+    // function mycon() {
+    //     const fruits = ["apple", "banana", "graphes", "watermelon"];
+    //     const targetFruit = "apple";
+    //     let targetIndex = -1;
+
+    //     for (let i = 0; i < fruits.length; i++) {
+    //         if (fruits[i] === targetFruit) {
+    //             targetIndex = i;
+    //             break;
+    //         }
+    //     }
+    //     if (targetIndex !== -1) {
+    //         console.log("Index of", targetFruit, "is:", targetIndex);
+    //     }
+    //     else {
+    //         console.log(targetFruit, "not found in the array.");
+    //     }
+    // }
+
+    // for (let i = 0; i < 5; i++) {
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+    // document.write("<br>");
+    // document.write("<br>");
+
+    // for (let i = 0; i < 5; i++) {
+    //     for (let j = 0; j < 5; j++) {
+    //         document.write("# ");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // document.write("<br>");
+    // document.write("<br>");
+
+    // for (let i = 5; i >= 0; i--) {
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+
+    // }
+
+    //  document.write("<br>");
+    //  document.write("<br>");
+
+
+    // for (let i = 0; i < 5; i++) {
+    //     document.write("<br>");
+    //     for (let j = 0; j <= 5-i-1; j++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     for (let j = 0; j <= i-1; j++) {
+    //         document.write("*");
+    //     }
+    // }
+
+    // for (let i = 4; i >= 0; i--) {
+    //     document.write("<br>");
+    //     for (let j = 0; j <= 5-i-1; j++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     for (let j = 0; j <= i-1; j++) {
+    //         document.write("*");
+    //     }
+    // }
+
+    //  for (let i = 0; i < 5; i++) {
+    //     document.write("<br>");
+    //     for (let j = 0; j <= 5-i-1; j++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     for (let j = 0; j <= i-1; j++) {
+    //         document.write("*");
+    //     }
+
+    //         document.write("&nbsp;&nbsp;");
+
+
+    //     for (let j = 0; j <= 5-i-1; j++) {
+    //         document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     for (let j = 0; j <= i-1; j++) {
+    //         document.write("*");
+    //     }
+    // }
+
+
+    //   for (let i = 0; i < 4; i++) {
+    //     document.write("<br>");
+    //      for (let j = 0; j <= 5-i-1; j++) {
+    //          document.write("&nbsp;&nbsp;");
+    //      }
+    //      for (let j = 0; j <= i; j++) {
+    //          document.write("*");
+    //      }
+    //      for (let j = 0; j <= i-1; j++) {
+    //          document.write("*");
+    //      }
+    //  }
+    // for (let i = 4; i >= 0; i--) {
+    //     document.write("<br>");
+    //      for (let j = 0; j <= 5-i-1; j++) {
+    //          document.write("&nbsp;&nbsp;");
+    //      }
+    //      for (let j = 0; j <= i; j++) {
+    //          document.write("*");
+    //      }
+    //      for (let j = 0; j <= i-1; j++) {
+    //          document.write("*");
+    //      }
+    //  }
+
+
+
+    // for (let i = 0; i < 5; i++) {
+    //     for (let j = 0; j <= 5 - 1; j++) {
+    //         if (i == 0 || i == 4 || j == 0 || j == 4) {
+    //             document.write("*");
+    //         } else {
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //         // document.write("*");
+    //         document.write("&nbsp;");
+    //     }
+
+    //     document.write("<br>");
+    // }
+    // document.write("<br>");
+    // document.write("<br>");
+
+
+    // for (let i = 0; i < 4; i++) {
+    //       let num=1;
+    //       for (let k = 0; k < 3-i; k++) {
+    //          document.write("&nbsp;&nbsp;");
+
+    //       }
+    //       for (let j = 0; j <= i ; j++) {
+    //         document.write(i+1);
+    //          document.write("&nbsp;&nbsp;");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    //  for (let i = 0; i < 4; i++) {
+    //       for (let j = 0; j <= i; j++) {
+    //           document.write(j+1);
+
+    //           //  document.write("&nbsp;&nbsp;");
+    //         }
+    //           document.write("<br>");
+    // }
+
+
+    //  for (let i = 4; i >= 0; i--) {
+    //       for (let j = 0; j < i; j++) {
+    //           document.write(j+1);
+
+    //           //  document.write("&nbsp;&nbsp;");
+    //         }
+    //           document.write("<br>");
+    // }
+
+
+    // let count=1;
+    // for (let i = 0; i <= 4; i++) {
+    //     for (let j = 0; j <= 4 - 1; j++) {
+    //     }
+    //     for (let j = 1; j <= i; j++) {
+    //         document.write(count + "&nbsp;");
+    //         count++;
+    //     }
+
+    //     document.write("<br>");
+    // }
+
+    // let count = 0;
+    // for (let i = 0; i < 4; i++) {
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 0 || i == 2 || j == 1||j==1||j==3) {
+    //             document.write(1);
+    //         } else {
+    //             document.write(0 + "&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+    // for (let i = 0; i < 4; i++) {
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 0 || i == 2 || j == 1 || j == 3) {
+    //             if (i == 2 && j == 1) {
+    //                 document.write(0);
+    //             } else {
+    //                 document.write(1);
+    //             }
+    //             // document.write(1);
+    //         } else {
+    //             document.write(0 + "&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+    //  for (let i = 0; i <= 4; i++) {
+    //      document.write("<br>");
+    //       for (let j = 0; j <= 5-i-1; j++) {
+    //           document.write("&nbsp;&nbsp;");
+    //       }
+    //       for (let j = 0; j < i-1; j++) {
+    //           document.write(i-j);
+    //       }
+    //       for (let j = i-1; j >= 0; j--) {
+    //           document.write(i-j);
+    //       }
+    //   }
+
+
+    //  for (let i = 0; i < 5; i++) {
+
+    //      for (let j = 0; j <= i-1; j++) {
+    //          document.write("&nbsp;&nbsp;");
+    //      }
+    //      for (let k = 0; k <= 4-1; k++) {
+    //         document.write("*");
+    //      }
+    //      document.write("<br>");
+    //  }
+
+    //   for (let i = 0; i < 5; i++) {
+    //      for (let j = 0; j <= i-1; j++) {
+    //         document.write("*")
+    //          document.write("&nbsp;&nbsp;");
+    //      }
+    //      document.write("<br>&nbsp");
+    //  }
+
+    //  for (let i = 0; i < 5; i++) {
+    // for (let s = 0; s < 5 - i - 1; s++) {
+    //     document.write("&nbsp;&nbsp;");
+    // }
+
+    // for (let j = 0; j <= i; j++) {
+    //     document.write("*&nbsp;&nbsp;");
+    // }
+    //     document.write("<br>");
+    //     document.write("&nbsp;&nbsp;");
+    // }
+
+    // for (let i = 0; i < 4; i++) {
+    //        let num=1;
+    //        for (let k = 0; k < 3-i; k++) {
+    //           document.write("&nbsp;&nbsp;");
+
+    //        }
+    //        for (let j = 0; j <= i ; j++) {
+    //          document.write("*");
+    //           document.write("&nbsp;&nbsp;");
+    //      }
+
+    //      document.write("<br>");
+    //  }
+    //   for (let i = 3; i > 0; i--) {
+    //        for (let k = 0; k < 4-i; k++) {
+    //           document.write("&nbsp;&nbsp;");
+
+    //        }
+    //        for (let j = 0; j < i ; j++) {
+    //          document.write("*");
+    //           document.write("&nbsp;&nbsp;");
+    //      }
+
+    //      document.write("<br>");
+    //  }
+
+    // for (let i = 0; i < 5; i++) {
+
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //     document.write("&nbsp&nbsp");
+
+    //     }
+    //     document.write("<br>");
+
+    // }
+    //     for (let i = 4; i > 0; i--) {
+
+    //     for (let j = 0; j < i; j++) {
+    //         document.write("*");
+    //     document.write("&nbsp&nbsp");
+
+    //     }
+    //     document.write("<br>");
+
+    // }
+
+
+    // for (let i = 4; i > 1; i--) {
+
+    //     for (let k = 0; k < i; k++) {
+    //      document.write("*&nbsp&nbsp");
+
+    //     }
+    //     document.write("<br>");
+    // }
+
+    //    for (let i = 1; i < 5; i++) {
+    //       for (let k = 0; k < i; k++) {
+    //        document.write("*&nbsp&nbsp");
+
+    //       }
+    //       document.write("<br>");
+    //   }
+
+    //  for (let i = 0; i < 5+1; i++) {
+    //     for (let j = 0; j < 5+1; j++) {
+    //       document.write("*&nbsp&nbsp&nbsp&nbsp");
+    //      }
+
+    //      document.write("<br>");
+    //  }
+
+
+    // for (let i = 4; i > 1; i--) {
+
+    //     for (let j = 0; j < i; j++) {
+    //         document.write("*");
+    //         document.write("&nbsp&nbsp");
+
+    //     }
+    //     document.write("<br>");
+
+    // }
+    //  for (let i = 0; i < 5; i++) {
+
+    //     for (let j = 0; j <= i; j++) {
+    //         document.write("*");
+    //         document.write("&nbsp&nbsp");
+
+    //     }
+    //     document.write("<br>");
+
+    // }
+
+
+    //  for (let i = 0; i <= 4; i++) {
+    //       let num=1;
+    //       for (let k = 0; k < 4-i; k++) {
+    //          document.write("&nbsp;&nbsp;");
+
+    //       }
+    //       for (let j = 0; j <= i ; j++) {
+    //         document.write("*");
+    //          document.write("&nbsp;&nbsp;");
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+
+    // for (let i = 0; i < 4; i++) {
+    //     for (let k = 0; k < i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+
+    //     for (let j = i + 1; j <= 4; j++) {
+    //         document.write(j + "&nbsp;&nbsp;");
+    //     }
+
+    //     document.write("<br>");
+    // }
+
+
+    //  for (let i = 0; i < 4; i++) {
+    //     for (let k = 0; k < i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+
+    //     for (let j = i + 1; j < 5; j++) {
+    //         document.write(j + "&nbsp;&nbsp;");
+    //     }
+
+    //     document.write("<br>");
+    // }
+    //  for (let i = 2; i >= 0; i--) {
+    //     for (let k = 0; k < i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+    //     }
+
+    //     for (let j = i+1; j < 5; j++) {
+    //         document.write(j + "&nbsp;&nbsp;");
+    //     }
+
+    //     document.write("<br>");
+    // }
+
+
+    // for (let i = 0; i <= 4; i++) {
+    //     let num = 1;
+    //     for (let k = 0; k < 4 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 2 && j == 1 || i == 3 && j == 2 || i == 3 && j == 1) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+    //         }
+    //         else {
+    //             document.write("*");
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+
+
+    // for (let i = 4; i >= 0; i--) {
+    //     let num = 1;
+    //     for (let k = 0; k < 4 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 2 && j == 1 || i == 3 && j == 2 || i == 3 && j == 1) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+    //         }
+    //         else {
+    //             document.write("*");
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // for (let i = 0; i <= 4; i++) {
+    //     let num = 1;
+    //     for (let k = 0; k < 4 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 2 && j == 1 || i == 3 && j == 2 || i == 3 && j == 1) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+    //         }
+    //         else {
+    //             document.write("*");
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // for (let i = 0; i < 3; i++) {
+    //     let num = 1;
+    //     for (let k = 0; k < 4 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 2 && j == 1) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;")
+    //         }
+    //         else {
+    //             document.write("*");
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+    // for (let i = 3; i >= 0; i--) {
+    //     let num = 1;
+    //     for (let k = 0; k < 4 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 3 && j == 2 || i == 3 && j == 1 || i==2 && j==1) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+
+    //         }
+    //         else {
+    //             document.write("*");
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+    // for (let i = 0; i < 4; i++) {
+    //     let num = 1;
+    //     for (let k = 0; k < 3 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 0 || j == 0 || i==3 && j==3 || i==2 && j==2||  i==1 && j==1) {
+    //             document.write(1 ,"&nbsp;&nbsp;");
+    //         }
+    //         else {
+
+    //             document.write(i);
+    //             document.write("&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+
+    // for (let i = 0; i < 3; i++) {
+    //     for (let k = 0; k < 3- i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 1 && j == 0 || i == 2 && j == 0 || i == 3 && j == 0) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+    //         }
+    //         else {
+    //             document.write("*&nbsp;&nbsp;&nbsp;");
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+    // for (let i = 3; i >= 0; i--) {
+    //     for (let k = 0; k < 3 - i; k++) {
+    //         document.write("&nbsp;&nbsp;");
+
+    //     }
+    //     for (let j = 0; j <= i; j++) {
+    //         if (i == 3 && j == 0 || i==2 && j==0 || i==3 && j==1 || i==1 && j==0) {
+    //             document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+    //         }
+    //         else {
+    //             document.write("*&nbsp;&nbsp;&nbsp;");
+    //         }
+
+    //     }
+    //     document.write("<br>");
+    // }
+
+
+
+
+
+
+</script>
+
+</html>

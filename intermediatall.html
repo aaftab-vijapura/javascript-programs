@@ -1,0 +1,265 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .styled {
+      font-weight: bold;
+      font-style: italic;
+      font-size: large;
+    }
+
+    li {
+      cursor: pointer;
+      padding: 5px;
+      font-size: 18px;
+    }
+  </style>
+  <body>
+    <input type="text" name="name" id="name">
+    <p id="showName"></p>
+    <button onclick="myFun()">click</button>
+  <ul>
+    <li class="demo">Item 1</li>
+    <li class="demo">Item 2</li>
+    <li class="demo">Item 3</li>
+  </ul>
+  </body>
+  <!-- <script>
+    function myFun() // button click event
+     {
+      const numbers = [5, 12, 9, 130, 44];
+      var sum=0
+      for (let i = 0; i < numbers.length; i++) {
+        // var sum = sum + numbers[i];
+        sum = sum+numbers[i]
+      }
+      console.log(sum);
+    }
+  </script> -->
+
+  <!-- 
+  <script>
+    const cartItems = [
+      { name: "Laptop", price: 999.99 },
+      { name: "Headphones", price: 149.95 },
+      { name: "Mouse", price: 29.99 },
+    ];
+    let total=0;
+    for (let i = 0; i < cartItems.length; i++) {
+      total += cartItems[i].price;
+    }
+    console.log(total);
+  </script> -->
+
+  <!-- <script>
+    function myFun() //button click event {
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+      let even = [];
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+          even.push(numbers[i]);
+        }
+      }
+      console.log(even);
+    }
+  </script> -->
+
+  <!-- <script>
+    const num = 5;
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} X ${i} = ${num*i}`)
+    }
+  </script> -->
+
+  <!-- <script>
+  const fruits = ["apple", "banana", "orange", "grape"];
+  const targetFruit = "grape";
+  let targetIndex = -1; 
+
+  for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i] === targetFruit) {
+      targetIndex = i;
+      break;
+    }
+  }
+
+  if (targetIndex !== -1) {
+    console.log("Index of", targetFruit, "is:", targetIndex);
+  } else {
+    console.log(targetFruit, "not found.");
+  }
+</script> -->
+
+  <!--                                            pattern starts here                              -->
+
+  <!-- <script> //increasing triangle
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 0; j < i; j++) {
+            document.write(`*`)
+        }
+        document.write("<br/>")
+    }
+  </script> -->
+
+  <!-- <script> //descreasing triangle
+    for (let i = 5; i > 0; i--) {
+      document.write("<br/>");
+      for (let j = 0; j < i; j++) {
+        document.write(`*`);
+      }
+    }
+  </script> -->
+
+  <!-- <script>  //square pattern
+    for (let i = 0; i < 5; i++) {
+      document.write("<br/>");
+      for (let j = 0; j < 5; j++) {
+         document.write(` \n #`);   // use that loop in & and $ also
+      }
+    }
+  </script> -->
+
+  <!-- <script> //revrese right  half pyramid
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5-i; j++) {
+          document.write(` \n *`);
+      }
+      document.write("<br/>");
+    }
+  </script> -->
+
+  <!-- <script>
+    //Hill Pattern
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5-i-1; j++) {
+        document.write(`&nbsp;&nbsp;&nbsp;`);
+      }
+      for (let k = 0; k <2* i+1; k++) {
+        document.write(` \n *`);
+      }
+      document.write("<br/>");
+    }
+  </script> -->
+
+  <!-- <script>
+    //Hill Pattern second trick
+
+        for (let i = 0; i < 5; i++) {
+        document.write("<br>");
+        for (let j = 0; j <= 5-i-1; j++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 0; j <= i; j++) {
+            document.write("*");
+        }
+        for (let j = 0; j <= i-1; j++) {
+            document.write("*");
+        }
+    }
+  </script> -->
+  <!-- <script>
+    //Reverse Hill Pattern second trick
+
+        for (let i = 4; i >=  0; i--) {
+        document.write("<br>");
+        for (let j = 0; j <= 5-i-1; j++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 0; j <= i; j++) {
+            document.write("*");
+        }
+        for (let j = 0; j <= i-1; j++) {
+            document.write("*");
+        }
+    }
+  </script> -->
+
+  <!-- <script>
+    //Double Hill Pattern second trick
+
+    for (let i = 0; i < 5; i++) {
+      document.write("<br>");
+      for (let j = 0; j <= 5 - i - 1; j++) {
+        document.write("&nbsp;&nbsp;&nbsp;");
+      }
+      for (let j = 0; j <= i; j++) {
+        document.write("\n *");
+      }
+      for (let j = 0; j <= i - 1; j++) {
+        document.write("\n *");
+      }
+      for (let j = 0; j <= 5 - i - 1; j++) {
+        document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+      }
+      for (let j = 0; j <= i; j++) {
+        document.write("\n *");
+      }
+      for (let j = 0; j <= i - 1; j++) {
+        document.write("\n *");
+      }
+    }
+  </script> -->
+  <!-- 
+  <script> //square hollow pattern
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        if (j==0 || i==0 || i==4 || j==4 ) {
+            document.write("*&nbsp;");
+        }
+        else{
+            document.write("&nbsp;&nbsp;&nbsp;")
+        }
+      }
+      document.write("<br/>")
+    }
+  </script> -->
+
+  <!-- <script> //number triangular
+    for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < 5-i-1; k++) {
+           document.write("&nbsp;");
+        }
+      for (let j = 0; j < i; j++) {
+        document.write(i);
+      }
+      document.write("<br/>");
+    }
+  </script> -->
+
+  <!-- <script> //number increasing pyramid
+     for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j < i; j++) {
+        document.write(j)        
+      }      
+      document.write("<br/>")
+     }
+  </script> -->
+  <!-- <script> //number increasing reverse pyramid
+     for (let i = 5; i > 0; i--) {
+      for (let j = 1; j < i; j++) {
+        document.write(j)        
+      }      
+      document.write("<br/>")
+     }
+  </script> -->
+
+  <!-- <script>
+    let changeValue = document.querySelectorAll(".demo");
+    function myFun() {
+      let userName=document.getElementById(".name");
+      let showName=document.getElementById(".showName");
+      //document.body.style.backgroundColor = "red";
+      
+     showName.innerHTML= userName.value;
+
+    }
+    changeValue.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('styled');
+      });
+    });
+  </script> -->
+</html>

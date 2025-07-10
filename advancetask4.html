@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: gray;
+    }
+    .container {
+     max-width: 400px;
+     margin: 150px auto;
+    }
+    .container img {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+  <body>
+    <div class="container" id="division">
+      <img
+        id="img1"
+        src="first.jpg"
+        alt="first image"
+      />
+      <img
+        id="img2"
+        src="second.jpg"
+        alt="second image"
+      />
+      <img
+        id="img3"
+        src="third.jpg"
+        alt="3rd image"
+      />
+    </div>
+  </body>
+  <script>
+    const img1 = document.getElementById("img1");
+    const img2 = document.getElementById("img2");
+    const img3 = document.getElementById("img3");
+
+    const images = [img1, img2, img3];
+    let currentIndex = 0;
+
+    function showImages(index) {
+      images.forEach((img, i) => {
+        img.style.display = i === index ? "block" : "none";
+      });
+    }
+    showImages(currentIndex);
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImages(currentIndex);
+    }, 3000);
+
+    const bgcolor = ["#FEAE31", "#000009", "#006F83"];
+    let currentColor = 0;
+
+    function changeColor(index) {
+       document.body.style.backgroundColor = bgcolor[index];
+    }
+    changeColor(currentColor);
+    setInterval(() => {
+      currentColor = (currentColor + 1) % bgcolor.length;
+      changeColor(currentColor);
+    }, 3000);
+  </script>
+</html>

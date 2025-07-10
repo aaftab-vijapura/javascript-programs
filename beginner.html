@@ -1,0 +1,270 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="demo"></p> -->
+    <button onclick="myFun()">hello</button>
+  </body>
+  <!-- <script>
+    function greet(name) {
+      console.log("Hello," + name + "!");
+    }
+    greet("harry");
+    greet("Alice");
+    greet("Bob");
+    greet("Harry");
+  </script> -->
+  <!-- <script>// use button and p#demo mandatory
+    let count=0;
+    function myFun(){
+        // console.log(count++)
+        document.getElementById("demo").innerHTML=count++;
+    }
+  </script> -->
+
+  <!-- <script>
+    var num=1;
+
+    if (num%2==1) {
+        console.log("the Numer is odd")
+    }
+    else{
+        console.log("the numer is even")
+    }
+  </script> -->
+
+  <!-- <script>
+    var grade=89;
+    if (grade>100) {
+        console.log("not valid")
+    } else if(90<grade) {
+        console.log("A")
+    }
+    else if(80<grade){
+        console.log("B")
+    }
+
+    //more more.......
+  </script> -->
+  <!-- <script>
+    function calculatePower(base,exponent){
+        let answer = (base**exponent);
+        console.log(answer);
+    }
+    calculatePower(2,3);
+  </script> -->
+  <!-- <script>
+    function concatination(first, second) {
+        let result=String(first)+String(second);
+        console.log(`The Concatination of two Argument is  ${first} concat ${second} = ${result} `);
+    }
+    concatination(1, 4);
+  </script> -->
+
+  <!-- <script>
+    //use button in this for myfun click event
+
+    function myFun() {
+        var number = prompt("Enter Numer:");
+      if (number > 0) {
+        console.log("the number is possitive");
+      } else if (number < 0) {
+        console.log("the number is negative");
+      } else if(number==0){
+        console.log("the Number is Zero");
+      }
+    }
+  </script> -->
+
+  <!-- <script>
+    let obj = {
+      name: "MR_Vijapura",
+      age: 35,
+    };
+
+    function discount() {
+      if (obj.age > 50) {
+        console.log(`${obj.name}, Sorry Sir, no discount available`);
+      } else if (obj.age > 40) {
+        console.log(`${obj.name}Sir ,you got 40% Discount`);    
+      } else if (obj.age > 30) {
+        console.log(`${obj.name}Sir ,you got 30% Discount`);
+      } else if (obj.age > 20) {
+        console.log(`${obj.name}Sir ,you got 20% Discount`);
+      } else if (obj.age > 10) {
+        console.log(`${obj.name}Sir ,you got 10% Discount`);
+      }
+    }
+    discount()
+  </script> -->
+
+  <!-- <script>
+    let likesChocolate = false;
+    let likesVanilla = false;
+
+    function myFun() {
+      if (likesChocolate || likesVanilla)  {
+        console.log("Here's Your Ice Cream");
+      }else {
+        console.log("Sorry, we don't have a flavor for you.");
+      }
+    }
+  </script> -->
+
+  <!-- <script>
+    let itemInStock=0,isSubscribed=1;
+    function myFun(){
+        if (itemInStock==true && isSubscribed==true ) {
+             console.log("You Can Purchase Item! perfectly")   
+        } else if(itemInStock==true && isSubscribed==false){
+            console.log("Please Subscribe First!")
+        }else if(itemInStock==false && isSubscribed==true){
+            console.log("Item Not in Stock")
+        }
+        else{
+            console.log("you haven't Subscribe and sry item not available")
+        }
+    }
+  </script> -->
+
+  <!-- <script>
+    let isAdmin=false,isEditor=true,isModerator=false;
+    if (isAdmin || isEditor || isModerator) {
+        console.log("Access Granted")
+    }
+    else{
+        console.log("Access Denied")
+    }
+  </script> -->
+
+  <!-- <script>
+    let day = 1;
+    switch (day) {
+      case 1:
+        console.log("Monday");
+        break;
+
+      case 2:
+        console.log("tuesday");
+        break;
+      case 3:
+        console.log("wednesday");
+        break;
+      case 4:
+        console.log("thursday");
+        break;
+      case 5:
+        console.log("friday");
+        break;
+      case 6:
+        console.log("Saturday");
+        break;
+      case 7:
+        console.log("Sunday");
+        break;
+    }
+  </script> -->
+
+  <!-- <script>
+    let grade = "C";
+    switch (grade) {
+      case "A":
+        console.log("Excellent");
+        break;
+      case "B":
+        console.log("Good");
+        break;
+      case "C":
+        console.log("Satisfactory");
+        break;
+      case "D":
+        console.log("Needs Impoovment");
+        break;
+      case "E":
+        console.log("You are at low level");
+        break;
+        default:
+            console.log("Fail")
+            break;
+    }
+  </script> -->
+
+  <!-- <script>
+    var latter = prompt("Enter Only One Character:");
+
+    switch (latter) {
+      case "a":
+      case "e":
+      case "o":
+      case "i":
+      case "u":
+        console.log(`${latter} is Vowel`);
+        break;
+
+      default:
+        console.log(`${latter} Not Vowels`);
+        break;
+    }
+  </script> -->
+
+  <!-- <script>
+    var month = 101;
+
+    switch (month) {
+      case 12:
+      case 1:
+      case 2:
+        console.log("winter");
+        break;
+
+      case 3:
+      case 4:
+      case 5:
+        console.log("Spring");
+        break;
+
+      case 6:
+      case 7:
+      case 8:
+        console.log("Summer");
+        break;
+
+      case 9:
+      case 10:
+      case 11:
+        console.log("Autumn");
+        break;
+
+      default:
+        console.log("Month Not Found")
+        break;
+    }
+  </script> -->
+
+  <script>
+    function isTruthy(value) {
+      if (value) {
+        console.log(`${JSON.stringify(value)} ➝ true`);
+      } else {
+        console.log(`${JSON.stringify(value)} ➝ false`);
+      }
+    }
+
+    // Test with various values
+    isTruthy(true); // true
+    isTruthy(false); // false
+    isTruthy(1); // true
+    isTruthy(0); // false
+    isTruthy("hello"); // true
+    isTruthy(""); // false
+    isTruthy(null); // false
+    isTruthy(undefined); // false
+    isTruthy([]); // true
+    isTruthy({}); // true
+    isTruthy(NaN); // false
+    isTruthy(" "); // true (non-empty string with space)
+  </script>
+</html>

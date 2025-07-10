@@ -1,0 +1,416 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <!-- <input type="text" id="nameInput" placeholder="Enter your Name" />
+     <input type="number" id="ageInput" placeholder="Enter your age" />-->
+     <!-- <button onclick="Grade()">count</button>  -->
+</body>
+<script>
+
+    function isTruthy(value) {
+  if (value) {
+    console.log(value, "=> true");
+  } else {
+    console.log(value, "=> false");
+  }
+}
+
+// Numbers
+isTruthy(1);         // true
+isTruthy(0);         // false
+isTruthy(-5);        // true
+
+// Strings
+isTruthy("hello");   // true
+isTruthy("");        // false
+
+// Booleans
+isTruthy(true);      // true
+isTruthy(false);     // false
+
+// Null and Undefined
+isTruthy(null);      // false
+isTruthy(undefined); // false
+
+// Arrays
+isTruthy([]);        // true
+isTruthy([1, 2]);    // true
+
+// Objects
+isTruthy({});        // true
+isTruthy({ name: "JS" }); // true
+
+
+    // var month="11";
+    // switch (month) {
+    //     case "12":
+    //     case "1":
+    //     case "2":
+    //         console.log("Winter");
+    //         break;
+
+    //     case "3":
+    //     case "4":
+    //     case "5":
+    //         console.log("Spring");
+    //         break; 
+            
+    //     case "6":
+    //     case "7":
+    //     case "8":
+    //         console.log("Summer");
+    //         break;     
+
+    //     case "9":
+    //     case "10":
+    //     case "11":
+    //         console.log("autumn");
+    //         break;     
+    
+    //     default:
+    //         console.log("Invalid");
+    //         break;
+    // }
+
+//     var letter = "i";
+// console.log("aeiou".includes(letter) ? letter + " is a vowel" : letter + " is not a vowel");
+
+
+    // var letters="e";
+    // switch (letters) {
+    //     case "a":
+    //         console.log(letters,"vowels");
+    //         break;
+    //     case "e":
+    //         console.log(letters,"vowels");
+    //         break;
+    //     case "i":
+    //         console.log(letters,"vowels");
+    //         break;        
+    //     case "o":
+    //         console.log(letters,"vowels");
+    //         break;
+    //     case "u":
+    //         console.log(letters,"vowels");
+    //         break;
+
+    //     default:
+    //         console.log("'"+letters,+"'"+"not a vowels");
+    //         break;
+    // }
+
+    // var grade="E";
+    // switch (grade) {
+    //     case "A":
+    //             console.log("Excelent");
+    //             break;
+    //                     case "B":
+    //             console.log("GOOd");
+    //             break;
+    //                     case "C":
+    //             console.log("Satisfactory");
+    //             break;
+    //                     case "D":
+    //             console.log("Needs improvement");
+    //             break;
+    //                     case "E":
+    //             console.log("Fail");
+    //             break;
+    
+    //     default:
+    //         console.log("Invalid Grade");
+    //         break;
+    // }
+
+
+//    let day = 7; // Get the current day number (0-6)
+
+// switch (day) {
+
+//     case 1:
+//         console.log("monday");
+//         break;
+//     case 2:
+//         console.log("tuesday");
+//         break;
+//     case 3:
+//         console.log("wednesday");
+//         break;
+//     case 4:
+//         console.log("thursday");
+//         break;
+//     case 5:
+//         console.log("friday");
+//         break;
+//     case 6:
+//         console.log("saturday");
+//         break;
+//             case 7:
+//         console.log("sunday");
+//         break;
+//     default:
+//         console.log("invalid date");
+//         break;
+// }
+
+    // let isAdmin=false,isEditor=false,isModerator=false;
+    // if (isAdmin==true||isEditor==true||isModerator==true) {
+    //     console.log("access granted");
+    // }
+    // else{
+    //     console.log("access denied");
+
+    // }
+
+    // let itemInStock=false ,isSubscribed=true;
+
+
+    // function Grade(){
+    //     if (itemInStock==true && isSubscribed==true) {
+    //         console.log("You can purchase this item");
+    //     }
+    //     else if(itemInStock==false && isSubscribed==true){
+    //         console.log("Item Is Out Of Stock");
+    //     }
+    //     else if(itemInStock==true && isSubscribed==false){
+    //         console.log("You Do No Subscribed");
+    //     }
+    //     else if(itemInStock==false && isSubscribed==false){
+    //         console.log("Item Is out of stock, and You Do No Subscribed");
+
+    //     }
+    // }
+
+    //     let likesChocolate=false ,likesVanilla=true;
+    // function Grade(){
+    //     if (likesChocolate || likesVanilla) {
+    //     console.log("Here's your ice cream");
+    //   } else {
+    //     console.log("Sorry, we don't have a flavor for you");
+    //   }
+    // }
+
+
+// function Grade(){
+    
+    
+//     let name= document.getElementById("nameInput").value;
+//     let age=parseInt(document.getElementById("ageInput").value);
+//     if (age>50) {
+//         console.log(`${name} ,you are not eligible to get any discount as per your Age is ${age} `);
+//     }
+//     else if(age>=40){
+//         console.log(`${name} , you are eligible for a 40% discounts, as per your Age is ${age}`);
+//     }
+//     else if(age>=30){
+//         console.log(`${name} ,you are eligible for a 30% discounts, as per your Age is ${age}`);
+
+//     }
+//     else if(age>=20){
+//         console.log(`${name} ,you are eligible for a 20% discounts as per your Age is ${age}`);
+//     }
+//     else if(age<20){
+//         console.log(`${name} ,you are eligible for a 20% discounts, as per your Age is ${age}`);
+
+//     }
+
+// }
+    
+
+    // function Grade(){
+    //     var num=111;
+    //     if (num>0) {
+    //         console.log("possitive");
+    //     }
+    //     else if(num<0){
+    //         console.log("nagetive");
+    //     }
+    //     else if(num==0){
+    //         console.log("Zero");
+    //     }
+    //     else{
+    //         console.log("Invalid");
+    //     }
+    // }
+
+    // function myCon(param1,param2){
+    //     let concat=String(param1)+String(param2);
+    //     console.log("the concat value is :",concat);
+    // }
+    // myCon(1,5);
+
+    // function calculatePower(base,exponent){
+    //     let result=base**exponent;
+    //     console.log(`${base}raised to the power of ${exponent} is ${result}`);
+    // }
+
+    //   calculatePower(2, 3); 
+    //     calculatePower(5, 2);  
+    //     calculatePower(10, 0);
+    //     calculatePower(7, 1); 
+    //     calculatePower(3, 4);  
+
+    //     function power(bs,ex){
+    //         res=bs**ex;
+    //         console.log(bs +"raised to the power of"+ ex +" is " + res);
+    //     }
+    //     power(2,3);
+    //     power(5,2);
+
+
+
+
+    // var grade=80;
+    
+    // function Grade(){
+    //     var grade = parseInt(document.getElementById("gradeInput").value);
+    //     if (grade>100) {
+    //         alert("Invalid Gradiation Please Check PeaceFully!");
+    //     }
+    //    else if(grade>=90){
+    //         alert("A Grade");
+    //     }
+    //     else if(grade>=80){
+    //         alert("B Grade");
+    //     }
+    //     else if(grade>=70){
+    //         alert("C Grade");
+    //     }
+    //     else if(grade>=60){
+    //         alert("D Grade");
+    //     }
+    //     else if(grade>=30){
+    //         alert("E Grade");
+    //     }
+    //     else if(grade<30){
+    //         alert("Fa Grade");
+    //     }
+        
+    // }
+
+    // var num = 10;
+    // function EvenOdd() {
+    //     if (num % 2 === 1) {
+    //         console.log("This Number Is Odd");
+    //     }
+    //     else{
+    //     console.log("This Number Is Even ");
+    //     }
+    // }
+    
+
+
+
+
+    // first task 
+
+
+    // var a = 10, b = 20;
+    // var c = a + b;
+    // document.write("the value of C is" + c + "<br>");
+
+    // var num7 = 20, num8 = 10;
+    // var div = num8 / num7;
+    // document.write("the value of division is" + div + "<br>");
+
+    // var num9 = 110, num10 = 10;
+    // var sum = num9 / num10;
+    // document.write("the value of division is" + sum + "<br>");
+
+    // var num11 = 10;
+    // document.write(num11 + 1 ,"<br>" );
+
+    // var num12 = 10;
+    // document.write(num11 - 1);
+
+
+
+    // second task
+
+    // let weekbudget=100,grocessy=35,gas=20,miscellaneous=12;
+    // let totalexpense=grocessy+gas+miscellaneous;
+    // document.write("Total expense is:",totalexpense);
+
+    // totalremain=weekbudget-totalexpense;
+    // document.write("remain:",totalremain);
+
+    // third task
+
+    // let Celsius=25;
+    // let Fahrenheit=(Celsius*9/5)+32;
+    // document.write(Fahrenheit);
+
+    // fourth task
+
+    // let people=8,eat=3,slices=8;
+    // let orderd=people*eat/slices;
+    // document.write(orderd);
+
+    // fifth task
+
+    // let totalbill=75,people=5;
+    // let needtopay=totalbill/people;
+    // document.write(needtopay);
+
+    // sixth task
+
+    // let destination=250,avrage=55;
+    // let approx=destination/avrage;
+    // document.write(approx ,"(hour)<br>");
+    // document.write(approx*60 ,"(minutes)");
+
+    // seventh task
+
+    // var greet = "xyz";
+    // document.write("hello," + greet + "!")
+    // function greet(name) {
+    //     document.write("hello " + name + "!" + "<br>");
+    // }
+
+    // greet("alice");
+    // greet("bob");
+    // greet("charlie");
+
+    // let person = {
+    //     fname: 'raju', lname: 'sharma'
+    // };
+    // console.log("the full name is:" + person.fname + " " + person.lname);
+
+    //    // document.getElementById('btn1').innerHTML= person.fname+" "+person.lname;
+    //     const button=document.getElementById("btn1");
+    //     button.addEventListener("click",function(){
+    //         document.write(person.fname+" "+person.lname);
+    //     })
+
+    // function myfun() {
+    //     document.write(person.fname+" "+person.lname );
+    // }
+
+
+    // eight task
+    // function myfun(){
+    //     var num=1;
+    //     console.log(num+1);
+    // }
+    // let count=0;
+    // function mycon(){
+    //     count++;
+    //     console.log(count);
+    // }
+
+    // function increament(){
+    //     count++;
+    //     console.log(count);
+    // }
+    // document.getElementById("btn1").addEventListener("click",increament);
+
+
+</script>
+
+</html>

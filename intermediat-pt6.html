@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(181, 177, 165);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 30%;
+        height: auto;
+        background-color: darkcyan;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .inputs input,
+    .inputs button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <form action="">
+        <textarea name="textarea" id="textarea" oninput="updatecount()"></textarea>
+        <div class="counter">
+            Characters: <span id="charCounter">(:</span>
+        </div>
+    </form>
+</body>
+<script>
+
+ function updatecount(){
+    const textarea=document.getElementById("textarea");
+    const countDisplay=document.getElementById("charCounter");
+    countDisplay.textContent=textarea.value.length;
+ }
+</script>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(218, 210, 199);
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: rgb(218, 213, 213);
+      height: auto;
+      display: block;
+      margin: 20px;
+      width: 40%;
+      padding: 20px;
+    }
+    /* .container .row input {
+      margin: 10px;
+      padding: 10px;
+      width: 80%;
+      border: none;
+      border-radius: 5px;
+    } */
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <label for="date">Please Select Your BirthDate With Real Time</label>
+        <input type="datetime-local" id="date" name="date" class="date"
+      </div>
+      <button type="submit" style="margin: 20px 0px" onclick="myFunction()">
+        Count Age
+      </button>
+      <h3 id="demo"></h3>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    function myFunction() {
+      const userInput = document.getElementById("date").value;
+      if (!userInput) {
+        alert("Plase Select Date as per Your accual Date and Time");
+        return;
+      }
+      const birthDate = new Date(userInput);
+      const current = new Date();
+
+      let diffMs = current - birthDate;
+
+      let milliseconds = diffMs % 1000;
+      let seconds = Math.floor(diffMs / 1000) % 60;
+      let minutes = Math.floor(diffMs / (1000 * 60)) % 60;
+      let hours = Math.floor(diffMs / (1000 * 60 * 60)) % 24;
+      let days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      let years=current.getFullYear-birthDate.getFullYear();
+      let months=current.getMonth-birthDate.getMonth();
+      let days=current.getDate-birthDate.getDate();
+
+
+      // console.log("User's Value: "+birthDate);
+      // console.log("Current: "+current);
+    }
+  </script>
+</html>

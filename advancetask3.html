@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div Show / Hide Using SetInterval</title>
+  </head>
+  <body>
+    <div class="container" id="division" style="display: block; background-color: red; align-items: center; text-align: center; justify-content: center; margin: 200px; padding: 20px; color:white">
+       <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione
+      consectetur fuga dolorum facere eligendi. Ab sequi minima sit suscipit
+      fuga voluptate, voluptatum perspiciatis nihil delectus laudantium quas
+      sunt, obcaecati commodi unde reiciendis! Optio, alias vitae pariatur,
+      soluta suscipit, animi a aspernatur beatae id officiis quia aperiam nulla
+      at distinctio!
+      </h1>
+    </div>
+  </body>
+  <script>
+   const division= document.getElementById("division");
+    setInterval(() => {
+        if (division.style.display==="none") {
+            division.style.display="block";
+        }
+        else{
+            division.style.display="none";
+        }
+    }, 1000);
+  </script>
+</html>

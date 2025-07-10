@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgb(218, 210, 199);
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        min-height: 100vh;
+      }
+      .main-heading::after {
+        content: "⌃";
+        font-size: 40px;
+        float: right;
+        color: black;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const texts = [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500 ",
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem.",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000.",
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour",
+    ];
+
+    const texts2 = [
+      " 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of",
+      "f Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lo",
+      " are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum gene",
+      " predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a",
+    ];
+
+    const div = document.createElement("div");
+    div.className = "container";
+    div.style.height = "auto";
+    div.style.display = "block";
+    div.style.margin = "20px";
+    div.style.backgroundColor = " rgb(218, 213, 213)";
+    div.style.width = "35%";
+    div.style.padding = "20px";
+
+    const heading = document.createElement("h2");
+    heading.className = "main-heading";
+    heading.innerHTML = "How Does BatterMent Make Money?";
+
+    const subheading = document.createElement("h4");
+    subheading.className = "sub-heading";
+    subheading.style.color = " rgb(77, 49, 49)";
+    subheading.innerHTML = "BatterMent Make Money In Four simple Ways:";
+    subheading.style.marginTop = "15px";
+
+    div.appendChild(heading);
+    div.appendChild(subheading);
+
+    texts.forEach((text, index) => {
+      const para = document.createElement("p");
+      para.className = "paragraph";
+      para.innerHTML = text;
+      para.style.marginTop = "15px";
+      para.style.marginTop = "20px";
+      div.appendChild(para);
+    });
+
+    const heading2 = document.createElement("h2");
+    heading2.className = "main-heading";
+    heading2.innerHTML =
+      "How Does BatterMent Compare To Other Financial Comapanies?";
+    heading2.style.marginTop = "55px";
+    div.appendChild(heading2);
+
+    const heading3 = document.createElement("h2");
+    heading3.className = "main-heading";
+    heading3.innerHTML = "Who Are The Expert Behind Betterment?";
+    heading3.style.marginTop = "55px";
+    div.appendChild(heading3);
+
+    texts.forEach((text, index) => {
+      const para = document.createElement("p");
+      para.className = "paragraph";
+      para.innerHTML = text;
+      para.style.marginTop = "15px";
+      para.style.marginTop = "20px";
+      div.appendChild(para);
+    });
+
+    document.body.appendChild(div);
+  </script>
+</html>

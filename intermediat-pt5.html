@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(181, 177, 165);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 30%;
+        height: auto;
+        background-color: darkcyan;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .inputs input,
+    .inputs button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input type="text" name="name" id="name" placeholder="Please Enter Name">
+            <input type="password" name="password" id="password" placeholder="Please Enter password">
+            <input type="password" name="cpassword" id="cpassword" placeholder="Please conform Password">
+            <label for="email" style="color: rgb(139, 218, 4);" class="lbl2" id="lbl2"></label>
+            <button type="submit" onclick="myCon()">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    function myCon() {
+        let messageLabel2 = document.getElementById("lbl2");
+        let mainpass = document.getElementById("password").value;
+        let name = document.getElementById("name").value;
+        let conformpass = document.getElementById("cpassword").value;
+        if (mainpass !== conformpass) {
+            messageLabel2.textContent = "Password Not Matched yet";
+        }
+        else {
+            messageLabel2.textContent = "";
+        }
+        if (name === "" || mainpass === "" || conformpass === "") {
+            messageLabel2.textContent = "Please Fill The Detail.";
+        }
+    }
+</script>
+
+</html>

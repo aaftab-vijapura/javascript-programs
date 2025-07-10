@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Futuristic Counter</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Orbitron", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Particle-style background circles */
+      body::before {
+        content: "";
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(
+          circle,
+          rgba(0, 255, 213, 0.2) 1px,
+          transparent 1px
+        );
+        background-size: 50px 50px;
+        animation: moveBg 60s linear infinite;
+        z-index: 0;
+      }
+
+      @keyframes moveBg {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-500px, -500px);
+        }
+      }
+
+      .container {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      #counter {
+        font-size: 6rem;
+        color: #00ffd5;
+        background: rgba(0, 28, 31, 0.9);
+        padding: 50px 100px;
+        border-radius: 25px;
+        box-shadow: 0 0 20px #00ffd5, 0 0 40px rgba(0, 255, 213, 0.4),
+          inset 0 0 30px rgba(0, 255, 213, 0.3);
+        animation: float 3s ease-in-out infinite, pulseGlow 2s infinite;
+        transition: all 0.3s ease;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 30px #00ffd5;
+        }
+        50% {
+          box-shadow: 0 0 50px #00fff2;
+        }
+      }
+
+      button {
+        font-size: 1.2rem;
+        margin: 20px 10px;
+        padding: 14px 36px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #001c1f;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background: linear-gradient(135deg, #00ffd5, #00bfa6);
+        box-shadow: 0 5px 25px rgba(0, 255, 213, 0.4);
+        transition: all 0.3s ease;
+      }
+
+      button::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.2) 10%,
+          transparent 60%
+        );
+        animation: shine 2s linear infinite;
+        z-index: -1;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(0, 255, 213, 0.6);
+      }
+
+      button:active {
+        transform: scale(0.97);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p id="counter">0</p>
+      <button onclick="myFunc()">Start</button>
+      <button onclick="stopFunc()">Stop</button>
+      <button onclick="resetFunc()">Reset</button>
+    </div>
+
+    <script>
+      let count = 0;
+      let intervalId = null;
+      const counter = document.getElementById("counter");
+
+      function myFunc() {
+        if (intervalId) return;
+        intervalId = setInterval(() => {
+          count++;
+          counter.textContent = count;
+        }, 1000);
+      }
+
+      function stopFunc() {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+
+      function resetFunc() {
+        clearInterval(intervalId);
+        intervalId = null;
+        count = 0;
+        counter.textContent = count;
+      }
+    </script>
+  </body>
+</html>

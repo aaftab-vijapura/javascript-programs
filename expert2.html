@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: blanchedalmond;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+</style>
+
+<body>
+    <!-- <input type="date"> -->
+
+</body>
+<script>
+    // function calculateAge(birthdate)
+    // const today=new Date();
+    // const birthDate=new Date(birthdate);
+    // let Age=today.getFullYear()-birthDate.getFullYear();
+    // const monthDiff=today.getMonth()-birthDate.getMonth();
+
+    // if () {
+
+    // }
+
+
+    const add = (a, b) => (a + b);
+    console.log(add(5, 3));
+
+
+    const person = name => `wolcome, ${name}`;
+    console.log(person("hello"));
+
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1, 4, 5, 6];
+    console.log(arr2);
+
+    function sum(...numbers) {
+        return numbers.reduce((acc, num) => acc + num, 0);
+    }
+    console.log(sum(1, 2, 3, 4, 6, 7, 5, 4, 6));
+
+
+</script>
+
+</html>
