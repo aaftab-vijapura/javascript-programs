@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div">this text is visible / no-visible using setInterval</div>
+  </body>
+  <script>
+    let div = document.getElementById("div");
+    let toggle = true;
+    let intervalId = setInterval(() => {
+      div.style.display = toggle ? "none" : "block";
+      toggle = !toggle;
+    }, 1000);
+  </script>
+
+  <!-- 
+  setInterval(() => {
+      let div = document.getElementById("div");
+      div.style.display = (div.style.display === "none") ? "block" : "none";
+    }, 1000);
+--></html>

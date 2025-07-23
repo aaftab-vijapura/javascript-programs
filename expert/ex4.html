@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let arr = [1, 11, 3, 41,4122222, 5];
+    // const firstevenIndex = arr.findIndex(function (num) {
+    //   return num % 2 === 0;
+    // });
+    // console.log(firstevenIndex)
+
+    // let arr = ["hello", "world", "how", "are", "you"];
+    // const newArr = arr.findIndex(function (string) {
+    //   return string.startsWith("a");
+    // });
+    // console.log(newArr)
+
+    let arr = [
+      { name: "naman", age: 10 },
+      { name: "chagan", age: 29 },
+      { name: "magan", age: 95 },
+    ];
+
+    let newArr = arr.findIndex(function (person) {
+      return person.age >= 30;
+    });
+    console.log(newArr);
+  </script>
+</html>

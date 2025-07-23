@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #img1 {
+        width: 100%;
+        height: 500px;
+        display: block;
+      }
+      #img2 {
+        width: 100%;
+        height: 500px;
+        display: none;
+      }
+      #img3 {
+        width: 100%;
+        height: 500px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img src="../second.jpg" alt="img1" id="img1" />
+      <img src="../first.jpg" alt="img2" id="img2" />
+      <img src="../third.jpg" alt="img3" id="img3" />
+    </div>
+  </body>
+  <script>
+    let img1 = document.getElementById("img1");
+    let img3 = document.getElementById("img3");
+    let img2 = document.getElementById("img2");
+    let images=[img1,img2,img3]
+    let current = 0;
+
+
+    let scroll = setInterval(() => {
+      images[current].style.display = "none"; 
+      current = (current + 1) % images.length;
+      images[current].style.display = "block";
+      
+    }, 3000);
+  </script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Counter</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+    p {
+      font-size: 48px;
+    }
+    button {
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="counter">0</p>
+
+  <button onclick="startCounter()">Start</button>
+  <button onclick="stopCounter()">Stop</button>
+  <button onclick="resetCounter()">Reset</button>
+
+  <script>
+    let count = 0;
+    let intervalId = null;
+
+    function startCounter() {
+      if (intervalId !== null) return; 
+      intervalId = setInterval(() => {
+        count++;
+        document.getElementById("counter").innerText = count;
+      }, 1000);
+    }
+    function stopCounter() {
+      clearInterval(intervalId);
+      intervalId = null;
+    } 
+    function resetCounter() {
+      stopCounter();
+      count = 0;
+      document.getElementById("counter").innerText = count;
+    }
+  </script>
+
+</body>
+</html>
