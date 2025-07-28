@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="file"
+      name=""
+      id="img1"
+      style="display: block; width: 50%; height: 100px; border: 1px solid black"
+    />
+    <button onclick="myFun()" style="width: 50%; height: 100px">Submit</button>
+    <div
+      class="container"
+      style="width: 50%; height: 300px; border: 1px solid brown"
+    ></div>
+  </body>
+  <script>
+    function myFun() {
+      let image = document.getElementById("img1");
+      // let div = document.getElementsByClassName("container")[0];
+      let div = document.querySelector(".container");
+
+      div.style.width = "50%";
+      div.style.height = "300px";
+
+      if (image.files && image.files[0]) {
+        let reader = new FileReader();
+        reader.onload = function (e) {
+          div.style.backgroundImage = `url('${e.target.result}')`;
+          div.style.backgroundSize = "cover";
+          div.style.backgroundPosition = "center";
+        };
+        reader.readAsDataURL(image.files[0]);
+      }
+
+      if (image.files && image.files[0]) {
+        let reader = new FileReader();
+        reader;
+      }
+    }
+  </script>
+</html>

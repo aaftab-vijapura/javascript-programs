@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function formDate(date, formatString) {
+      const obj = {
+        YYYY: date.getFullYear(),
+        MM: String(date.getMonth() + 1).padStart(2, "0"),
+        DD: String(date.getDate()).padStart(2, "0"),
+        HH: String(date.getHours()).padStart(2, "0"),
+        MN: String(date.getMinutes()).padStart(2, "0"),
+        SS: String(date.getSeconds()).padStart(2, "0"),
+      };
+      return formatString.replace(
+        /YYYY|MM|DD|HH|MN|SS/g,
+        (match) => obj[match]
+      );
+    }
+    let today = new Date();
+    console.log(formDate(today, "YYYY-MM-DD"));
+    console.log(formDate(today,  "DD/MM/YYYY"));
+    console.log(formDate(today, "MM DD, YYYY"));
+    console.log(formDate(today, "MM-DD-YYYY  HH:MN:SS"));
+    
+    //   function formatDate(date, formatString) {
+    //     const map = {
+    //         YYYY: date.getFullYear(),
+    //         MM: String(date.getMonth() + 1).padStart(2, '0'),
+    //         DD: String(date.getDate()).padStart(2, '0'),
+    //         HH: String(date.getHours()).padStart(2, '0'),
+    //         mm: String(date.getMinutes()).padStart(2, '0'),
+    //         ss: String(date.getSeconds()).padStart(2, '0')
+    //     };
+
+    //     return formatString.replace(/YYYY|MM|DD|HH|mm|ss/g, match => map[match]);
+    // }
+
+    // const today = new Date();
+
+    // console.log(formatDate(today, "YYYY-MM-DD"));
+    // console.log(formatDate(today, "DD/MM/YYYY"));
+    // console.log(formatDate(today, "MM DD, YYYY"));
+    // console.log(formatDate(today, "DD-MM-YYYY HH:mm:ss"));
+  </script>
+</html>

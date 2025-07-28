@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <label>Name:</label>
+        <input type="text" name="name" id="name" />
+        <label for="name" id="lbl1"></label>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+        <label for="email" id="lbl2"></label>
+      </div>
+      <div>
+        <button type="submit" id="button" onclick="myFun()">Submit</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function myFun() {
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      let button = document.getElementById("button");
+      let lbl1 = document.getElementById("lbl1");
+      let lbl2 = document.getElementById("lbl2");
+
+      if (name.value === "") {
+        lbl1.innerText = "Name Is Requeired";
+      } else if (name.value.length > 10) {
+        lbl1.innerText = "max 10 Chars";
+  
+      } else if (name.value.length < 3) {
+        lbl1.innerText = "Min 3 Chars";    } else {
+        lbl1.innerText = "";
+      }
+
+      if (email.value === "") {
+        lbl2.innerText = "Email Is Required";
+      } else if (!email.value.endsWith("@gmail.com")) {
+        lbl2.innerText = "Check your email";
+      } else {
+        lbl2.innerText = "";
+      }
+      if (
+        name.value &&
+        email.value &&
+        lbl1.innerText === "" &&
+        lbl2.innerText === ""
+      ) {
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push({ name: name.value, email: email.value });
+        localStorage.setItem("users", JSON.stringify(users));
+        // localStorage.setItem(name.value, email.value);
+      }
+    }
+  </script>
+</html>
+
