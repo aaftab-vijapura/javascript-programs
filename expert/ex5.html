@@ -27,18 +27,54 @@
     }
   </script> -->
 
-  <script>
-    let str = ["hello", "@world", "how", "are", "you"];
-    // for (let i = 0; i < str.length; i++) {
-    //   if (str[i].length > 4) {
-    //     console.log(str[i])
-    //   }
-    // }
+  <!-- <script>
+    let str = ["hello", "@world", "haow", "are", "you"];
+    for (let i = 0; i < str.length; i++) {
+      if (str[i].length > 4) {
+        console.log(str[i])
+      }
+    }
 
     for (let i = 0; i < str.length; i++) {
         if (str[i].startsWith("@")) {
             console.log(str[i])
         }
+    }
+
+    for (let i = 0; i < str.length; i++) {
+      if (str[i].includes("haow")) {
+        console.log(str[i]);
+      }
+    }
+  </script> -->
+
+  <script>
+    let obj = [
+      {
+        name: "mohan",
+        age: 42,
+      },
+      {
+        name: "rohan",
+        age: 29,
+      },
+      {
+        name: "aoham",
+        age: 31,
+      },
+    ];
+    let Start = "A".toLowerCase();
+
+    // for (let i = 0; i < obj.length; i++) {
+    //   if (obj[i].age > 40) {
+    //     console.log(obj[i]);
+    //   }
+    // }
+
+    for (let i = 0; i < obj.length; i++) {
+      if (obj[i].name.startsWith(Start)) {
+        console.log(obj[i].name);
+      }
     }
   </script>
 </html>

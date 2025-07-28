@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let proms = new Promise((resolve) => {
+    //   setTimeout(() => {
+    //     resolve("hello resolved");
+    //   }, 2000);
+    // });
+
+    // proms.then((value) => {
+    //   console.log(value);
+    // });
+
+    let proms = new Promise((resolve, reject) => {
+      let success = true;
+      setTimeout(() => {
+        if (success) {
+          resolve("It's resolve");
+        } else {
+          reject("it's reject");
+        }
+      }, 2000);
+    });
+    proms.then((value) => {
+      console.log(value);
+    });
+    proms.catch((error) => {
+      console.log(error);
+    });
+  </script>
+</html>

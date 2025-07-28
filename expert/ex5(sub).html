@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+  </body>
+  <script>
+    let count = 10;
+
+    let counting = setInterval(() => {
+        //   console.log(count);
+        let demo = document.getElementById("demo");
+        demo.innerText = count;
+        if (count === 0) {
+            // alert("Time up!");
+            demo.innerText = "Time up!";
+            clearInterval(counting);
+        }
+        count--;
+    }, 1000);
+  </script>
+</html>
